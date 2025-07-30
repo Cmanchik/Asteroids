@@ -44,7 +44,6 @@ namespace SpaceFighter.Movement
 
         private void Tilt()
         {
-            //Debug.Log(_rotationLimitVector);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(-_inputDirection.x * _rotationLimitVector), rotationSpeed);
         }
     }
