@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 432854315364529439, guid: 44f50b897fdec2d4388dd0ad4af87c21, type: 3}
-  interval: 0.5
+  interval: 0.2
   rightWeapon: {fileID: 1385309452}
   leftWeapon: {fileID: 1385309449}
 --- !u!1 &2042567406
