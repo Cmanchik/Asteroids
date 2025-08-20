@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -715471103311981691}
   - component: {fileID: -649008724473979496}
   - component: {fileID: 6800455791237008810}
+  - component: {fileID: -399973340920209154}
   m_Layer: 7
   m_Name: Asteroid
   m_TagString: Untagged
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46066443166e9c468ecd5ac7e864c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  collisionDamage: 1
 --- !u!114 &-649008724473979496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +166,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &-399973340920209154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089275075599903599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235e8b73e39ce5c4db570cfb8d5a5075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTakingDamage:
+    m_PersistentCalls:
+      m_Calls: []

@@ -11,9 +11,16 @@ namespace Assets.Scripts.General.Character
 
         public int Health { get => health; set => health = value; }
 
-        public UnityEvent OnDeath;
+        [SerializeField]
+        private UnityEvent OnDeath;
 
-        public UnityEvent OnTakingDamage;
+        [SerializeField]
+        private UnityEvent OnTakingDamage;
+
+        private void Awake()
+        {
+            OnDeath.AddListener(Death);
+        }
 
         public void TakeDamage(int damage)
         {
@@ -21,6 +28,11 @@ namespace Assets.Scripts.General.Character
 
             if (health <= 0) OnDeath?.Invoke();
             else OnTakingDamage?.Invoke();
+        }
+
+        private void Death()
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Enemies
 {
     public abstract class EnemyAbstract : MonoBehaviour
     {
         [SerializeField]
-        private int hp;
-
+        protected int collisionDamage;
 
         public abstract void OnCollisionEnter(Collision collision);
     }

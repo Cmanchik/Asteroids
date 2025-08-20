@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.SpaceFighter.Weapon
 {
     public abstract class BulletAbstract : MonoBehaviour
     {
+        [SerializeField] protected int damage;
         [SerializeField] protected float speed;
 
         protected Rigidbody rb;

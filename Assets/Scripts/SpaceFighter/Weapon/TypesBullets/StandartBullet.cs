@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.General.Character;
 using UnityEngine;
-
+ 
 namespace Assets.Scripts.SpaceFighter.Weapon.TypesBullets
 {
     public class StandartBullet : BulletAbstract
@@ -12,7 +12,7 @@ namespace Assets.Scripts.SpaceFighter.Weapon.TypesBullets
 
         protected override void OnCollisionEnter(Collision collision)
         {
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<HealthPoint>()?.TakeDamage(damage);
         }
     }
 }

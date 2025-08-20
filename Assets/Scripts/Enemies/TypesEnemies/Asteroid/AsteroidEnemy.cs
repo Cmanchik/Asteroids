@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.General.Character;
 using UnityEngine;
 
 namespace Assets.Scripts.Enemies.TypesEnemies.Asteroid
@@ -7,7 +7,7 @@ namespace Assets.Scripts.Enemies.TypesEnemies.Asteroid
     {
         public override void OnCollisionEnter(Collision collision)
         {
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<HealthPoint>()?.TakeDamage(collisionDamage);
         }
     }
 }
