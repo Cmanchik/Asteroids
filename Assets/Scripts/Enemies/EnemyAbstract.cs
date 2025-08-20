@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.General.Character;
+using UnityEngine;
 
 namespace Assets.Scripts.Enemies
 {
@@ -7,6 +8,10 @@ namespace Assets.Scripts.Enemies
         [SerializeField]
         protected int collisionDamage;
 
-        public abstract void OnCollisionEnter(Collision collision);
+        public virtual void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.TryGetComponent<HealthPoint>(out var hpEnemy)) hpEnemy.TakeDamage(collisionDamage);
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) Destroy(gameObject);
+        }
     }
 }

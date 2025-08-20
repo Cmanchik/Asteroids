@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.General.Character;
+using UnityEngine;
 
 namespace Assets.Scripts.SpaceFighter.Weapon
 {
@@ -16,7 +17,10 @@ namespace Assets.Scripts.SpaceFighter.Weapon
 
         protected abstract void Move();
 
-        protected abstract void OnCollisionEnter(Collision collision);
+        protected virtual void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.TryGetComponent<HealthPoint>(out var hpEnemy)) hpEnemy.TakeDamage(damage);
+        }
 
         private void FixedUpdate()
         {

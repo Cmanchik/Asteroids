@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 327802248}
   - component: {fileID: 327802247}
   - component: {fileID: 327802250}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: LeftBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 825721190}
   - component: {fileID: 825721189}
   - component: {fileID: 825721192}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: DownBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 872483755}
   - component: {fileID: 872483754}
   - component: {fileID: 872483757}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: UpBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1127,7 +1127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1621759594}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: DeathWallEnemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1166,7 @@ GameObject:
   - component: {fileID: 1967276993}
   - component: {fileID: 1967276992}
   - component: {fileID: 1967276995}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: RightBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

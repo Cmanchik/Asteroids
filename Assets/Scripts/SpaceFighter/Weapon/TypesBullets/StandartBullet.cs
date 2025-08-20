@@ -9,10 +9,5 @@ namespace Assets.Scripts.SpaceFighter.Weapon.TypesBullets
         {
             rb.linearVelocity = Vector3.forward * speed;
         }
-
-        protected override void OnCollisionEnter(Collision collision)
-        {
-            collision.gameObject.GetComponent<HealthPoint>()?.TakeDamage(damage);
-        }
     }
 }
