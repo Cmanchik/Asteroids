@@ -10,7 +10,7 @@ namespace Assets.Scripts.Enemies
 
         protected HealthPoint m_healthPoint;
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             m_healthPoint = GetComponent<HealthPoint>();
         }

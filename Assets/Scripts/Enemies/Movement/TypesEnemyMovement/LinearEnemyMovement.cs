@@ -21,5 +21,10 @@ namespace Assets.Scripts.Enemies.Movement.TypesEnemyMovement
         {
             rb.linearVelocity = _movementDirection * movementSpeed;
         }
+
+        public void RotateMovementDirection(int angleY)
+        {
+            _movementDirection = Quaternion.Euler(0, angleY, 0) * _movementDirection;
+        }
     }
 }

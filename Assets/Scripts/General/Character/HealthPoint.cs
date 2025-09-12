@@ -16,6 +16,7 @@ namespace Assets.Scripts.General.Character
 
         [SerializeField]
         private UnityEvent TakingDamage;
+        
 
         private void Awake()
         {
@@ -38,6 +39,11 @@ namespace Assets.Scripts.General.Character
         private void OnKilling()
         {
             Destroy(gameObject);
+        }
+
+        public void SubscribeToKilling(UnityAction call)
+        {
+            Killing.AddListener(call);
         }
     }
 }
