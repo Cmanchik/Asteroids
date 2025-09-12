@@ -19,7 +19,7 @@ namespace Assets.Scripts.SpaceFighter.Weapon
 
         protected virtual void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.TryGetComponent<HealthPoint>(out var hpEnemy)) hpEnemy.TakeDamage(damage);
+            if (collision.gameObject.TryGetComponent<HealthPoint>(out var hpEnemy)) hpEnemy.OnTakeDamage(damage);
         }
 
         private void FixedUpdate()
