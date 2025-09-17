@@ -12,9 +12,8 @@ namespace Assets.Scripts.SpaceFighter.Weapon.TypesWeapons
 
         protected override void Fire()
         {
-            Instantiate(bullet, rightWeapon.position, Quaternion.Euler(Vector3.zero));
-            Instantiate(bullet, leftWeapon.position, Quaternion.Euler(Vector3.zero));
+            Instantiate(bullet, rightWeapon.position, Quaternion.Euler(90, 0, 0));
+            Instantiate(bullet, leftWeapon.position, Quaternion.Euler(90, 0, 0));
         }
-
     }
 }
