@@ -7,9 +7,12 @@ namespace Assets.Scripts.General.Character
     public class HealthPoint : MonoBehaviour
     {
         [SerializeField]
-        private int health;
+        private int m_maxHealthPoints;
+        public int MaxHealthPoints { get => m_maxHealthPoints; }
 
-        public int Health { get => health; set => health = value; }
+
+        private int m_currentHealthPoint;
+        public int CurrentHealthPoint { get => m_currentHealthPoint; }
 
         [SerializeField]
         private UnityEvent Killing;
@@ -20,14 +23,15 @@ namespace Assets.Scripts.General.Character
 
         private void Awake()
         {
+            m_currentHealthPoint = m_maxHealthPoints;
             Killing.AddListener(OnKilling);
         }
 
         public void OnTakeDamage(int damage)
         {
-            health -= damage;
+            m_currentHealthPoint -= damage;
 
-            if (health <= 0) Killing?.Invoke();
+            if (m_currentHealthPoint <= 0) Killing?.Invoke();
             else TakingDamage?.Invoke();
         }
 
@@ -39,6 +43,11 @@ namespace Assets.Scripts.General.Character
         private void OnKilling()
         {
             Destroy(gameObject);
+        }
+
+        public void SubscribeToTakingDamage(UnityAction call)
+        {
+            TakingDamage.AddListener(call);
         }
 
         public void SubscribeToKilling(UnityAction call)
