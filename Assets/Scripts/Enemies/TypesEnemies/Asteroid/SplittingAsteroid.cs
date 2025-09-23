@@ -21,7 +21,7 @@ namespace Assets.Scripts.Enemies.TypesEnemies.Asteroid
 
         private void Start()
         {
-            m_healthPoint.SubscribeToKilling(Split);
+            m_healthPoint.SubscribeToDying(Split);
         }
 
         private void Split()

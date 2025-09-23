@@ -15,7 +15,7 @@ namespace Assets.Scripts.General.Character
         public int CurrentHealthPoint { get => m_currentHealthPoint; }
 
         [SerializeField]
-        private UnityEvent Killing;
+        private UnityEvent Dying;
 
         [SerializeField]
         private UnityEvent TakingDamage;
@@ -24,23 +24,23 @@ namespace Assets.Scripts.General.Character
         private void Awake()
         {
             m_currentHealthPoint = m_maxHealthPoints;
-            Killing.AddListener(OnKilling);
+            Dying.AddListener(OnDying);
         }
 
         public void OnTakeDamage(int damage)
         {
             m_currentHealthPoint -= damage;
 
-            if (m_currentHealthPoint <= 0) Killing?.Invoke();
+            if (m_currentHealthPoint <= 0) Dying?.Invoke();
             else TakingDamage?.Invoke();
         }
 
         public void OnTakeLethalDamage()
         {
-            Killing?.Invoke();
+            Dying?.Invoke();
         }
 
-        private void OnKilling()
+        private void OnDying()
         {
             Destroy(gameObject);
         }
@@ -50,9 +50,9 @@ namespace Assets.Scripts.General.Character
             TakingDamage.AddListener(call);
         }
 
-        public void SubscribeToKilling(UnityAction call)
+        public void SubscribeToDying(UnityAction call)
         {
-            Killing.AddListener(call);
+            Dying.AddListener(call);
         }
     }
 }

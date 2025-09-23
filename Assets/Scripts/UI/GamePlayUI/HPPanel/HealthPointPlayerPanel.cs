@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.UI.GameplayMenu.HPPanel
+namespace Assets.Scripts.UI.GamePlayUI.HPPanel
 {
     public class HealthPointPlayerPanel : MonoBehaviour
     {
@@ -24,8 +24,6 @@ namespace Assets.Scripts.UI.GameplayMenu.HPPanel
 
         private void ChangeHealthPoints()
         {
-            //Debug.Log("ChangeHealthPoints");
-
             for (int i = 0; i < m_healthPointPlayer.MaxHealthPoints; i++)
             {
                 if (i < m_healthPointPlayer.CurrentHealthPoint)
