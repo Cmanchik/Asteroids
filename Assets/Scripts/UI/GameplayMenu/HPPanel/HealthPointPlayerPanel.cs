@@ -24,7 +24,7 @@ namespace Assets.Scripts.UI.GameplayMenu.HPPanel
 
         private void ChangeHealthPoints()
         {
-            Debug.Log("ChangeHealthPoints");
+            //Debug.Log("ChangeHealthPoints");
 
             for (int i = 0; i < m_healthPointPlayer.MaxHealthPoints; i++)
             {
