@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.Enemies.Spawner
 {
-    public enum DirectionSpawn
+    public enum EDirectionSpawn
     {
         X, Y, Z
     }

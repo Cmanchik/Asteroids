@@ -1,12 +1,13 @@
-﻿using System.Collections;
+﻿using System;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Assets.Scripts.General.Randomizer
 {
     public class RandomizerWithWeight
     {
-        public static RandomObject GetRandomObject(RandomObject[] objects)
+        public static ObjectWithWeight GetRandomObject(ObjectWithWeight[] objects)
         {
             int totalWeight = objects.Sum(x => x.Weight);
             int randomNumber = Random.Range(0, totalWeight);
@@ -15,7 +16,9 @@ namespace Assets.Scripts.General.Randomizer
         }
     }
 
-    public struct RandomObject
+
+    [Serializable]
+    public struct ObjectWithWeight
     {
         public GameObject Object;
         public int Weight;

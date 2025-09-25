@@ -28,8 +28,6 @@ namespace Assets.Scripts.UI.GamePlayUI.PausePanel
             {
                 m_pausePanel.SetActive(false);
             }
-
-            Debug.Log("Sosal?");
         }
     }
 }
