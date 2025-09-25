@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235e8b73e39ce5c4db570cfb8d5a5075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  Killing:
+  m_maxHealthPoints: 1
+  Dying:
     m_PersistentCalls:
       m_Calls: []
   TakingDamage:
